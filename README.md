@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Barun Mandal | Full-Stack Developer
 
-## Getting Started
+## Professional Summary
 
-First, run the development server:
+A passionate Full-Stack Developer with expertise in modern web technologies and cloud infrastructure. Skilled in building scalable applications, integrating AI/ML solutions, and optimizing system performance.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technical Skills
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Programming Languages
+- **Languages:** Python, JavaScript, TypeScript, C, C++
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frameworks & Libraries
+- **Frontend:** React, Next.js
+- **Backend:** FastAPI, Express, Node.js
+- **State Management:** TanStack Query
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Databases
+- MySQL, MongoDB, PostgreSQL
+- Redis
 
-## Learn More
+### Cloud & DevOps
+- **Cloud:** AWS (EC2, SQS, Lambda, API Gateway, Cognito, VPC)
+- **DevOps:** Docker, CI/CD, GitHub Actions
+- **Infrastructure:** Terraform
 
-To learn more about Next.js, take a look at the following resources:
+### Tools & Technologies
+- Git, Salesforce, Slack Bot Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Professional Experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Associate Full-Stack Developer | PMsquare Nepal
+*Sep 2024 – Present*
+- Developed frontend for supply chain management using React & TanStack Query
+- Explored advanced AI concepts: Tokenization, Prompt Engineering, Vectorization
+- Worked with AWS Bedrock Agent
 
-## Deploy on Vercel
+### Backend Developer Intern | PMsquare Nepal
+*Jun 2024 – Aug 2024*
+- Configured comprehensive AWS services
+- Developed and deployed Slack bot using Bolt framework
+- Refactored React components to improve performance and API integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Node.js Freelancer
+*Mar 2023 – Feb 2024*
+- Developed robust TypeScript applications
+- Implemented Redis Serialization for efficient data management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Projects
+
+### Hospital Management System
+- Digital platform for hospital and doctor location
+- Technologies: Node.js, Express, SQL
+
+### Real Estate Mediator
+- Connect land owners and buyers
+- Technologies: Express, Sequelize ORM, JWT Verification
+
+### Real-Time Chat Application
+- Backend system with real-time communication
+- Technologies: Socket.IO, TypeScript, Express
+
+## Education
+
+**Bachelor in Computer Engineering**
+IOE-ERC, Dharan | *Oct 2019 – Apr 2024*
+
+## Contact
+
+- **Email:** barun.mandalbct@gmail.com
+- **Phone:** +977-9824865280
+
+---
