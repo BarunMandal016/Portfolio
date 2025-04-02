@@ -34,7 +34,7 @@ export default function page() {
               Full-Stack Developer with a passion for building scalable applications
             </h3>
             <p className="text-muted-foreground text-white">
-              I'm a Full-Stack Developer with expertise in React, FastAPI, Node.js, and AWS. I'm passionate about
+              I am a Full-Stack Developer with expertise in React, FastAPI, Node.js, and AWS. I am passionate about
               building scalable applications and optimizing cloud infrastructure. My skills extend to backend
               engineering, AI/ML integration, and automation.
             </p>

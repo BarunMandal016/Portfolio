@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
+  // SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,

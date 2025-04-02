@@ -1,6 +1,6 @@
 import { Libre_Baskerville } from "next/font/google";
 import profile from "../public/profile.jpg";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { MailIcon } from "lucide-react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
