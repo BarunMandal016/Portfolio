@@ -8,16 +8,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { FaTerminal } from "react-icons/fa6";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "AboutMe", href: "/about" },
-  { name: "Skills", href: "/skills" },
+  { name: "# home", href: "/" },
+  { name: "# about", href: "/about" },
+  { name: "# skills", href: "/skills" },
 ];
 
 const Navbar = () => {
   return (
-    <nav className="text-white py-3 sm:py-4 sm:px-6 px-3 gap-6 flex sm:justify-between bg-[#1d1e21] rounded-md items-center">
+    <header className="pt-8 flex justify-center">
+    <nav className="text-white py-4 sm:px-6 px-3 gap-6 flex justify-between bg-[#1d1e21] rounded-md max-w-5xl w-full">
       <Sheet >
         <SheetTrigger asChild>
           <button className="sm:hidden items-center text-xl">
@@ -31,21 +33,23 @@ const Navbar = () => {
           <div className="flex flex-col gap-4 mt-4 pl-4">
             {navItems.map((item) => (
               <Link href={item.href} key={item.name} className="text-sm">
-                <span className="font-mono text-sm">{`</${item.name}>`}</span>
+                <span className="font-mono text-sm">{item.name}</span>
               </Link>
             ))}
           </div>
         </SheetContent>
       </Sheet>
-      <span className="font-mono text-xl sm:text-2xl">Barun</span>
+      {/* <span className="font-mono text-xl sm:text-2xl">Barun</span> */}
+      <FaTerminal className="cursor-pointer" />
       <div className="items-center gap-4 hidden sm:flex">
         {navItems.map((item) => (
           <Link href={item.href} key={item.name} className={`text-sm`}>
-            <span className="font-mono text-sm">{`</${item.name}>`}</span>
+            <span className="font-mono text-sm">{item.name}</span>
           </Link>
         ))}
       </div>
     </nav>
+    </header>
   );
 };
 

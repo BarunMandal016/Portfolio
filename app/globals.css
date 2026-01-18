@@ -120,3 +120,8 @@
     @apply bg-background text-foreground;
   }
 } */
+ body > * {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+

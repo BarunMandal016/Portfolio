@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./NavBar";
+import Navbar from "@/components/NavBar";
+import miniIcon from "../public/mini.jpg";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Barun Mandal",
   description: "Portfolio of Barun Mandal",
+  icons: {
+    icon: miniIcon.src
+  },
+
 };
 
 export default function RootLayout({
@@ -15,11 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-screen w-screen bg-black`}>
-        <header className="p-3 sm:py-4 md:px-20 lg:px-56">
-          <Navbar />
-        </header>
-        <main>{children}</main>
+      <body className={`h-screen bg-black flex flex-col justify-between`}>
+        <div>
+        <Navbar />
+        <main className="flex justify-center">{children}</main>
+        </div>
+        <Footer />
       </body>
     </html>
   );
