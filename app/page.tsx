@@ -11,7 +11,7 @@ const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
   style: ["normal", "italic"],
 });
-function page() {
+function Home() {
   const nameRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -70,4 +70,4 @@ function page() {
     </section>
   );
 }
-export default page;
+export default Home;
