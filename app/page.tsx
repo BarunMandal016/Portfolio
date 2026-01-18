@@ -2,8 +2,8 @@
 import { Libre_Baskerville } from "next/font/google";
 import profile from "../public/profile.jpg";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { useGSAP } from '@gsap/react';
+// import { gsap } from "gsap";
+// import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from "react";
 // gsap.registerPlugin(SplitText)
 const libreBaskerville = Libre_Baskerville({
