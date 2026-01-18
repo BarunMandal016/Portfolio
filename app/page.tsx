@@ -25,7 +25,7 @@ function Home() {
       const scrambleInterval = setInterval(() => {
         const scrambled = originalText
           .split("")
-          .map((char, i) => (Math.random() < 0.5 ? letters[Math.floor(Math.random() * letters.length)] : char))
+          .map((char) => (Math.random() < 0.5 ? letters[Math.floor(Math.random() * letters.length)] : char))
           .join("");
         target.innerText = scrambled;
         frame++;
