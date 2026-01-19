@@ -5,7 +5,6 @@ import Image from "next/image";
 // import { gsap } from "gsap";
 // import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from "react";
-import TerminalComponent from "@/components/TerminalComponent";
 // gsap.registerPlugin(SplitText)
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],

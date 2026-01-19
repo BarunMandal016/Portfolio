@@ -1,5 +1,5 @@
 "use client"
-import { ChevronsLeftRight, Folder, Maximize, Maximize2, Minus, X } from "lucide-react";
+import { ChevronsLeftRight, Folder, Minus, X } from "lucide-react";
 import { useState, useRef, useEffect, ReactNode } from "react";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTrigger } from "./ui/dialog";
 
