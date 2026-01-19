@@ -1,10 +1,11 @@
 "use client"
 import { Libre_Baskerville } from "next/font/google";
-import profile from "../public/profile.jpg";
+import profile from "../../public/profile.jpg";
 import Image from "next/image";
 // import { gsap } from "gsap";
 // import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from "react";
+import TerminalComponent from "@/components/TerminalComponent";
 // gsap.registerPlugin(SplitText)
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ function Home() {
           infrastructure. Skilled in backend engineering, AI/ML integration and
           automation.
         </p> */}
+
       </div>
       <div className="flex items-center sm:justify-end">
         <Image

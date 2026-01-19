@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/NavBar";
 import miniIcon from "../public/mini.jpg";
 import Footer from "@/components/Footer";
-
 export const metadata: Metadata = {
   title: "Barun Mandal",
   description: "Portfolio of Barun Mandal",
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`h-screen bg-black flex flex-col justify-between`}>
-        <div>
+        <div className="">
         <Navbar />
         <main className="flex justify-center">{children}</main>
         </div>

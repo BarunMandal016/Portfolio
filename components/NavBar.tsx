@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { FaTerminal } from "react-icons/fa6";
+import TerminalComponent from "./TerminalComponent";
 
 const navItems = [
   { name: "# home", href: "/" },
@@ -40,7 +41,9 @@ const Navbar = () => {
         </SheetContent>
       </Sheet>
       {/* <span className="font-mono text-xl sm:text-2xl">Barun</span> */}
+      <TerminalComponent>
       <FaTerminal className="cursor-pointer" />
+      </TerminalComponent>
       <div className="items-center gap-4 hidden sm:flex">
         {navItems.map((item) => (
           <Link href={item.href} key={item.name} className={`text-sm`}>
