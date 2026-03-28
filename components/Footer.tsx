@@ -1,56 +1,63 @@
-import React from 'react'
-import { Separator } from './ui/separator'
-import { FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
-import { Button } from './ui/button'
-import Link from 'next/link'
-import { FaFacebookSquare } from 'react-icons/fa'
-import { CgUser } from 'react-icons/cg'
-import { Send } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { SITE_NAME, EMAIL, LOCATION, FOOTER_SOCIAL_LINKS } from "@/data";
+import type { ReactNode } from "react";
+
+const SOCIAL_ICONS: Record<string, ReactNode> = {
+  GitHub: <Github className="size-5" />,
+  LinkedIn: <Linkedin className="size-5" />,
+  Email: <Mail className="size-5" />,
+};
 
 function Footer() {
-    return (
-        <footer className='bg-[#9bb7938e]/80 flex justify-center py-4'>
-          <div className='max-w-5xl w-full flex-col space-y-4'>
-
-            <div className='flex justify-between'>
-        <div className='flex flex-col'>
-            <div className='flex items-center gap-1'>
-                <CgUser className='size-5 text-green-600'/> 
-            <strong className='font-bold text-lg'>Barun Mandal</strong>
-            </div>
-            <address className='flex items-center gap-1'> <Send className='size-4 text-green-600' /> <a href="mailto:barun.mandalbct@gmail.com" aria-label='Email'>barun.mandalbct@gmail.com</a></address>
-        </div>
-        <div className='flex flex-col gap-1'>
-        <span>Get In Touch</span>
-        <div className="flex space-x-2 [&_button]:p-0 [&_svg]:!size-8">
-          <Button>
-            <Link href="https://github.com/BarunMandal016" target="_blank" aria-label="GitHub">
-              <FaSquareGithub/>
-            </Link>
-          </Button>
-          <Button>
-            <Link
-              href="https://www.linkedin.com/in/barun-mandal16/"
-              target="_blank"
-              aria-label="LinkedIn"
+  return (
+    <footer className="border-t border-border bg-card/50">
+      <div className="max-w-5xl mx-auto w-full py-8 px-6">
+        <div className="flex flex-col sm:flex-row justify-between gap-6">
+          <div className="space-y-2">
+            <h3 className="font-bold text-lg">
+              Barun <span className="gradient-text">Mandal</span>
+            </h3>
+            <p className="text-sm text-muted-foreground flex items-center gap-1.5">
+              <MapPin className="size-3.5" />
+              {LOCATION}
+            </p>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
             >
-              <FaLinkedin />
-            </Link>
-          </Button>
-          <Button className="">
-            <Link href="https://www.facebook.com/barun.mandal.963871" aria-label="Facebook">
-              <FaFacebookSquare />
-            </Link>
-          </Button>
-        </div>
-        </div>
-            </div>
-            <Separator className='bg-black'/>
-            <div className='flex justify-center gap-2 [&_span]:text-sm'>
-                <span>&copy; Copyright 2026</span> <span>Made by Barun</span></div>
+              <Mail className="size-3.5" />
+              {EMAIL}
+            </a>
           </div>
-        </footer>
-    )
+
+          <div className="space-y-2">
+            <span className="text-sm font-medium">Connect</span>
+            <div className="flex gap-2">
+              {FOOTER_SOCIAL_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  aria-label={link.label}
+                  className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                >
+                  {SOCIAL_ICONS[link.label]}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 pt-4 border-t border-border flex justify-center">
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} {SITE_NAME}. Built with Next.js &
+            Tailwind.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
