@@ -11,7 +11,7 @@ const SOCIAL_ICONS: Record<string, ReactNode> = {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-card/50">
+    <footer className="border-t border-white/50 bg-card/50">
       <div className="max-w-5xl mx-auto w-full py-8 px-6">
         <div className="flex flex-col sm:flex-row justify-between gap-6">
           <div className="space-y-2">
@@ -31,16 +31,16 @@ function Footer() {
             </a>
           </div>
 
-          <div className="space-y-2">
-            <span className="text-sm font-medium">Connect</span>
-            <div className="flex gap-2">
+          <div className="flex flex-col gap-2 max-h-max">
+            <span className="text-[18px] font-medium">Connect</span>
+            <div className="grid grid-cols-2 gap-2">
               {FOOTER_SOCIAL_LINKS.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   aria-label={link.label}
-                  className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                  className="p-1 rounded-sm text-muted-foreground hover:text-foreground hover:bg-accent hover:scale-125 transition-colors ease-in-out"
                 >
                   {SOCIAL_ICONS[link.label]}
                 </Link>
@@ -49,10 +49,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-border flex justify-center">
+        <div className="mt-6 pt-4 border-t border-white flex justify-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} {SITE_NAME}. Built with Next.js &
-            Tailwind.
+            &copy; {new Date().getFullYear()} {SITE_NAME}
           </p>
         </div>
       </div>

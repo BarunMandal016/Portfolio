@@ -82,8 +82,8 @@ function ContributionCell({ day }: { day: ContributionDay }) {
 
 function GraphSkeleton() {
   return (
-    <div className="gh-graph-container animate-pulse">
-      <div className="flex gap-[3px]">
+    <div className="gh-graph-container animate-pulse h-40">
+      <div className="flex justify-evenly">
         {Array.from({ length: 52 }).map((_, w) => (
           <div key={w} className="flex flex-col gap-[3px]">
             {Array.from({ length: 7 }).map((_, d) => (
@@ -103,14 +103,14 @@ function ContributionGrid({ data }: { data: { total: { lastYear: number }; contr
   return (
     <>
       <div className="gh-graph-container" role="grid" aria-label="GitHub contribution graph">
-        <div className="gh-month-row">
+        <div className="gh-month-row h-4">
           <div className="gh-day-label-spacer" />
           <div className="gh-grid-scroll">
             <div className="flex relative" style={{ gap: "3px" }}>
               {monthLabels.map(({ label, col }) => (
                 <span
                   key={`${label}-${col}`}
-                  className="gh-month-label"
+                  className="gh-month-label h-3"
                   style={{ left: `${col * 15}px` }}
                 >
                   {label}
@@ -170,7 +170,7 @@ export default function GitHubGraph() {
   if (isError) return null;
 
   return (
-    <section className="py-12 border-t border-border/50">
+    <section className="py-12 border-t border-white/50">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold">GitHub Activity</h2>
         <a

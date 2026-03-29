@@ -67,5 +67,4 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const FOOTER_SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: GITHUB_URL },
   { label: "LinkedIn", href: LINKEDIN_URL },
-  { label: "Email", href: `mailto:${EMAIL}` },
 ];

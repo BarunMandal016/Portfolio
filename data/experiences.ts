@@ -54,14 +54,10 @@ export const HOME_EXPERIENCES: HomeExperience[] = [
     role: "Associate Full-Stack Developer",
     company: "PMsquare",
     period: "Sep 2024 — Present",
-    highlight:
-      "Reduced load times 40% · Zero-downtime CI/CD · Vector search · OAuth 2.0",
   },
   {
     role: "Backend Developer Intern",
     company: "PMsquare",
-    period: "Jun — Aug 2024",
-    highlight:
-      "AWS (EC2, Lambda, S3, ECS) · FastAPI · React performance refactoring",
+    period: "Jun 2024 — Aug 2024",
   },
 ];

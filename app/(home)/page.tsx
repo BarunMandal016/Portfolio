@@ -60,39 +60,7 @@ function useTypingEffect(
 
 function Home() {
   const nameRef = useRef<HTMLHeadingElement>(null);
-  const [nameReady, setNameReady] = useState(false);
   const typedRole = useTypingEffect(ROLES);
-
-  useEffect(() => {
-    const el = nameRef.current;
-    if (!el) return;
-
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const originalText = el.innerText;
-    let frame = 0;
-    const totalFrames = 25;
-
-    setNameReady(true);
-
-    const id = setInterval(() => {
-      el.innerText = originalText
-        .split("")
-        .map((char, i) => {
-          if (char === " ") return " ";
-          if (i < (frame / totalFrames) * originalText.length)
-            return originalText[i];
-          return letters[Math.floor(Math.random() * letters.length)];
-        })
-        .join("");
-      frame++;
-      if (frame > totalFrames) {
-        el.innerText = originalText;
-        clearInterval(id);
-      }
-    }, 40);
-
-    return () => clearInterval(id);
-  }, []);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -110,14 +78,12 @@ function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-              <span className="inline-block size-2 rounded-full bg-emerald-400 animate-pulse-dot" />
+              <span className="inline-flex size-2 rounded-full bg-emerald-400 animate-pulse-dot" />
               Open to opportunities
             </div>
             <h1
               ref={nameRef}
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold transition-opacity duration-100 ${
-                nameReady ? "opacity-100" : "opacity-0"
-              } ${libreBaskerville.className}`}
+              className={`text-4xl md:text-5xl lg:text-6xl font-bold transition-opacity duration-100 ${libreBaskerville.className}`}
             >
               Barun Mandal
             </h1>
@@ -142,9 +108,7 @@ function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-[15px] text-muted-foreground max-w-md leading-relaxed"
           >
-            2+ years shipping production Next.js apps on AWS. I cut page loads
-            by 40%, built AI-powered search systems, and automated zero-downtime
-            deployments at PMsquare.
+            2+ years of working experience in building projects and practicing instustry standards.
           </motion.p>
 
           <motion.div
@@ -152,11 +116,11 @@ function Home() {
             animate="visible"
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="flex flex-wrap gap-3 pt-1"
+            className="flex flex-wrap gap-3"
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent-blue to-accent-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 p-2.5 rounded-sm bg-gradient-to-r from-accent-blue to-accent-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
             >
               <FileText className="size-4" />
               View Work
@@ -192,7 +156,7 @@ function Home() {
         </motion.div>
       </section>
 
-      <section className="py-12 border-t border-border/50">
+      <section className="py-12 border-t border-white/50">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold">Experience</h2>
           <Link
@@ -225,9 +189,6 @@ function Home() {
                       {job.period}
                     </span>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                    {job.highlight}
-                  </p>
                 </div>
               </div>
             </div>
@@ -237,7 +198,7 @@ function Home() {
 
       <GitHubGraph />
 
-      <section className="py-12 border-t border-border/50">
+      <section className="py-12 border-t border-white/50">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold">Core Stack</h2>
           <Link

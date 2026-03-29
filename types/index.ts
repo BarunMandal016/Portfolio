@@ -64,7 +64,6 @@ export interface HomeExperience {
   role: string;
   company: string;
   period: string;
-  highlight: string;
 }
 
 // ── Terminal ──
