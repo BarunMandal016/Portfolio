@@ -49,7 +49,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-white flex justify-center">
+        <div className="mt-6 pt-4 flex justify-center">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} {SITE_NAME}
           </p>

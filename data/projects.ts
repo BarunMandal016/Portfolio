@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
       "Added multi-user note-taking across all stages of the hiring pipeline for team collaboration",
       "Built an event-driven pipeline that processes new candidate resumes by listening to change events from a SharePoint site",
     ],
-    tech: ["Next.js", "FastAPI", "Vector DB", "GenAI", "NLP", "SharePoint"],
+    tech: ["Next.js","TanStack Query", "Vector DB", "GenAI"],
     github: GITHUB_URL,
   },
   {
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
       "Developed real-time conversational interface within Slack for querying business intelligence data",
       "Implemented role-based and permission-based access control to ensure sensitive business data is only accessible to authorized users",
     ],
-    tech: ["Slack API", "Python", "NLP", "RBAC", "Real-time"],
+    tech: ["Slack API", "Python", "RBAC"],
     github: GITHUB_URL,
   },
   {
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     description:
       "This portfolio — built with Next.js 15, Tailwind CSS, and Framer Motion. Features an interactive terminal emulator, typing animations, and static deployment to GitHub Pages.",
     highlights: [],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    tech: ["Next.js", "Framer Motion"],
     github: GITHUB_URL,
   },
 ];

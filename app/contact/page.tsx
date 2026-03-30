@@ -45,7 +45,7 @@ export default function ContactPage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.1 }}
           className="lg:col-span-3"
         >
           <ContactForm />

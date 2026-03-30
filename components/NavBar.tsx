@@ -16,9 +16,9 @@ export default function Navbar() {
     <header className="sticky z-10 top-0 backdrop-blur-xl border-b border-b-white bg-gradient-to-r from-black/50 via-white/25 to-black/50">
       <nav className="max-w-5xl mx-auto flex items-center justify-between py-4 sm:px-0 px-0">
         <Link href="/" className="group flex items-center gap-2">
-          <span className="font-semibold font-serif text-xl sm:text-3xl group-hover:text-accent-blue transition-colors">
+          <h2 className="font-semibold font-serif text-xl sm:text-3xl group-hover:text-accent-blue transition-colors m-0">
             Barun
-          </span>
+          </h2>
         </Link>
 
         <div className="hidden md:flex items-center gap-1">

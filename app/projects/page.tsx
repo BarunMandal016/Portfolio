@@ -26,48 +26,51 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true }}
       variants={fadeIn}
       transition={{ duration: 0.5, delay: index * 0.15 }}
+      className="max-h-52 cursor-pointer"
     >
-      <Card className="card-hover bg-card border-border">
-        <CardContent className="p-5 space-y-3">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div className="flex items-center gap-2">
-              {PROJECT_ICONS[project.title]}
-              <div>
-                <h3 className="text-lg font-bold">{project.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {project.subtitle}
-                </p>
+      <Card className="card-hover bg-card border-border py-0 h-full">
+        <CardContent className="p-5 flex flex-col justify-between h-full">
+          <div className="flex flex-col gap-1">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="flex items-center gap-2">
+                {PROJECT_ICONS[project.title]}
+                <div>
+                  <h3 className="text-lg font-bold">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {project.subtitle}
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                {project.github && (
+                  <Link
+                    href={project.github}
+                    target="_blank"
+                    aria-label={`${project.title} on GitHub`}
+                    className="p-2 rounded-lg hover:bg-accent transition-colors"
+                  >
+                    <Github className="size-5 text-muted-foreground hover:text-foreground transition-colors" />
+                  </Link>
+                )}
+                {project.liveUrl && (
+                  <Link
+                    href={project.liveUrl}
+                    target="_blank"
+                    aria-label={`${project.title} live demo`}
+                    className="p-2 rounded-lg hover:bg-accent transition-colors"
+                  >
+                    <ExternalLink className="size-5 text-muted-foreground hover:text-foreground transition-colors" />
+                  </Link>
+                )}
               </div>
             </div>
-            <div className="flex gap-2">
-              {project.github && (
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  aria-label={`${project.title} on GitHub`}
-                  className="p-2 rounded-lg hover:bg-accent transition-colors"
-                >
-                  <Github className="size-5 text-muted-foreground hover:text-foreground transition-colors" />
-                </Link>
-              )}
-              {project.liveUrl && (
-                <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  aria-label={`${project.title} live demo`}
-                  className="p-2 rounded-lg hover:bg-accent transition-colors"
-                >
-                  <ExternalLink className="size-5 text-muted-foreground hover:text-foreground transition-colors" />
-                </Link>
-              )}
-            </div>
+
+            <p className="text-sm text-muted-foreground">
+              {project.description}
+            </p>
           </div>
 
-          <p className="text-sm text-muted-foreground">
-            {project.description}
-          </p>
-
-          {project.highlights.length > 0 && (
+          {/* {project.highlights.length > 0 && (
             <ul className="space-y-1.5">
               {project.highlights.map((h, i) => (
                 <li
@@ -79,9 +82,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 </li>
               ))}
             </ul>
-          )}
+          )} */}
 
-          <div className="flex flex-wrap gap-2 pt-1">
+          <div className="flex gap-2 pt-1">
             {project.tech.map((t) => (
               <Badge key={t} variant="secondary" className="text-xs">
                 {t}
@@ -113,7 +116,7 @@ export default function ProjectsPage() {
         Projects
       </motion.h2>
 
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}

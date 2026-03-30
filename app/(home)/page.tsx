@@ -4,13 +4,7 @@ import profile from "../../public/profile.jpg";
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  FileText,
-  Briefcase,
-  ArrowRight,
-  Calendar,
-} from "lucide-react";
+import { Mail, FileText, Briefcase, ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import { HOME_EXPERIENCES, CORE_SKILLS, ROLES } from "@/data";
 import GitHubGraph from "@/components/GitHubGraph";
@@ -25,7 +19,7 @@ function useTypingEffect(
   texts: string[],
   typingSpeed = 80,
   deletingSpeed = 40,
-  pauseTime = 2000
+  pauseTime = 2000,
 ) {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -108,7 +102,8 @@ function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-[15px] text-muted-foreground max-w-md leading-relaxed"
           >
-            2+ years of working experience in building projects and practicing instustry standards.
+            2+ years of working experience in building projects and practicing
+            instustry standards.
           </motion.p>
 
           <motion.div
@@ -135,12 +130,7 @@ function Home() {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex items-center sm:justify-end"
-        >
+        <div className="flex items-center sm:justify-end">
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-xl opacity-20 blur-xl" />
             <Image
@@ -150,13 +140,13 @@ function Home() {
               height={320}
               priority
               placeholder="blur"
-              className="relative object-cover max-w-72 sm:max-w-80 min-w-32 rounded-xl shadow-2xl animate-float"
+              className="relative object-cover max-w-72 sm:max-w-80 min-w-32 rounded-xl shadow-2xl"
             />
           </div>
-        </motion.div>
+        </div>
       </section>
 
-      <section className="py-12 border-t border-white/50">
+      <section className="py-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold">Experience</h2>
           <Link
@@ -170,7 +160,7 @@ function Home() {
           {HOME_EXPERIENCES.map((job) => (
             <div
               key={job.role}
-              className="p-4 rounded-xl border border-border bg-card/50 hover:border-accent-blue/20 transition-colors"
+              className="p-4 rounded-xl border bg-sky-200/5 hover:border-white/75 transition-colors"
             >
               <div className="flex items-start gap-3">
                 <div className="mt-1 p-1.5 rounded-lg bg-accent">
