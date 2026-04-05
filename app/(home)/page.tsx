@@ -115,7 +115,7 @@ function Home() {
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 p-2.5 rounded-sm bg-gradient-to-r from-accent-blue to-accent-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 p-2.5 rounded-sm bg-gradient-to-r from-green-400 to-green-800 text-white text-sm font-medium hover:opacity-90 transition-opacity"
             >
               <FileText className="size-4" />
               View Work

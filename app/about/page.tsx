@@ -6,9 +6,9 @@ import type { ImpactMetric } from "@/types";
 import type { ReactNode } from "react";
 
 const METRIC_ICONS: Record<string, ReactNode> = {
-  "Page load reduction": <TrendingUp className="size-5 text-accent-blue" />,
-  "Downtime deployments": <Zap className="size-5 text-accent-purple" />,
-  "AI-powered products": <Target className="size-5 text-accent-blue" />,
+  "Page load reduction": <TrendingUp className="size-5 text-green-400" />,
+  "Downtime deployments": <Zap className="size-5 text-green-400" />,
+  "AI-powered products": <Target className="size-5 text-green-400" />,
 };
 
 function MetricCard({ item }: { item: ImpactMetric }) {
