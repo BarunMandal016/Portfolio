@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="sticky z-10 top-0 backdrop-blur-xl border-b border-b-white bg-gradient-to-r from-black/50 via-white/25 to-black/50">
       <nav className="max-w-5xl mx-auto flex items-center justify-between py-4 sm:px-0 px-0">
         <Link href="/" className="group flex items-center gap-2">
-          <h2 className="font-semibold font-serif text-xl sm:text-3xl group-hover:text-accent-blue transition-colors m-0">
+          <h2 className="font-semibold font-serif text-xl sm:text-3xl">
             Barun
           </h2>
         </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-[2px] rounded-full bg-gradient-to-r from-accent-blue to-accent-purple" />
+                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-[2px] rounded-full bg-gradient-to-r from-white/50 to-white/90"/>
                 )}
               </Link>
             );
@@ -58,7 +58,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="hidden md:inline-flex text-xs font-medium px-4 py-2 rounded-sm bg-gradient-to-r from-accent-blue to-accent-purple text-white hover:opacity-90 transition-opacity"
+            className="hidden md:inline-flex text-xs font-medium px-4 py-2 rounded-sm bg-gradient-to-r from-white/40 to-white/80 text-white hover:opacity-90 transition-opacity"
           >
             Hire Me
           </Link>
