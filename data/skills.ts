@@ -2,12 +2,11 @@ import type { SkillCategory } from "@/types";
 
 export const SKILL_DATA: SkillCategory[] = [
   {
-    title: "Languages",
+    title: "Programming Languages",
     accent: "blue",
     bars: [
       { name: "JavaScript / TypeScript", level: 92 },
       { name: "Python", level: 80 },
-      { name: "C / C++", level: 60 },
     ],
     pills: [],
   },
@@ -22,18 +21,24 @@ export const SKILL_DATA: SkillCategory[] = [
     pills: ["Tailwind", "TanStack Query"],
   },
   {
-    title: "Databases & ORMs",
+    title: "Databases",
     accent: "blue",
     bars: [
-      { name: "PostgreSQL / MySQL", level: 85 },
+      { name: "PostgreSQL", level: 85 },
       { name: "MongoDB", level: 78 },
       { name: "Redis", level: 65 },
     ],
-    pills: ["Prisma", "Sequelize", "SQLAlchemy"],
+    pills: [],
   },
   {
-    title: "Cloud & DevOps",
+    title: "ORMs",
     accent: "purple",
+    bars: [],
+    pills: ["Prisma", "Sequelize", "Drizzle", "SQLAlchemy"],
+  },
+  {
+    title: "DevOps & Cloud",
+    accent: "blue",
     bars: [
       { name: "AWS (EC2, Lambda, S3, ECS)", level: 80 },
       { name: "Docker", level: 75 },
@@ -42,35 +47,29 @@ export const SKILL_DATA: SkillCategory[] = [
     pills: [],
   },
   {
-    title: "Testing & Misc",
-    accent: "blue",
+    title: "Miscellaneous",
+    accent: "purple",
     bars: [],
-    pills: [
-      "Cypress",
-      "Jest",
-      "Git",
-      "WebSocket",
-      "SSE",
-      "Webhooks",
-      "Langchain",
-      "OAuth 2.0",
-    ],
+    pills: ["Git", "WebSocket", "SSE", "Webhooks"],
   },
 ];
 
 export const CORE_SKILLS = [
+  "JavaScript",
   "TypeScript",
+  "Python",
   "React",
   "Next.js",
-  "Node.js",
-  "AWS",
-  "PostgreSQL",
-  "Docker",
+  "NestJS",
+  "Express",
   "FastAPI",
-];
-
-export const ROLES = [
-  "Full-Stack Developer",
-  "Cloud Engineer",
-  "Backend Developer",
+  "TanStack Query",
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "Prisma",
+  "AWS",
+  "Docker",
+  "GitHub Actions",
+  "Terraform",
 ];

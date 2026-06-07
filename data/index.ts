@@ -1,7 +1,11 @@
-export { EXPERIENCES, HOME_EXPERIENCES } from "./experiences";
-export { SKILL_DATA, CORE_SKILLS, ROLES } from "./skills";
-export { PROJECTS } from "./projects";
-export { IMPACT_METRICS } from "./about";
+export { HOME_EXPERIENCES, HOME_EDUCATION } from "./experiences";
+export { SKILL_DATA, CORE_SKILLS } from "./skills";
+export { PROJECTS, HOME_PROJECTS } from "./projects";
+export {
+  TASK_CATEGORIES,
+  TASK_COMPLEXITIES,
+  SAMPLE_TASK_IDEAS,
+} from "./hire";
 export { TERMINAL_RESPONSES } from "./terminal";
 export {
   SITE_NAME,
@@ -10,12 +14,8 @@ export {
   SITE_KEYWORDS,
   SITE_URL,
   EMAIL,
-  PHONE,
-  LOCATION,
   GITHUB_URL,
   LINKEDIN_URL,
   NAV_ITEMS,
-  CONTACT_INFO,
   SOCIAL_LINKS,
-  FOOTER_SOCIAL_LINKS,
 } from "./personal";

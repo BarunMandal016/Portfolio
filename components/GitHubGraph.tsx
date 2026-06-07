@@ -85,7 +85,7 @@ function GraphSkeleton() {
     <div className="gh-graph-container animate-pulse h-40">
       <div className="flex justify-evenly">
         {Array.from({ length: 52 }).map((_, w) => (
-          <div key={w} className="flex flex-col gap-[3px]">
+          <div key={w} className="flex flex-col gap-0.75">
             {Array.from({ length: 7 }).map((_, d) => (
               <div key={d} className="gh-cell bg-muted rounded-sm" />
             ))}
@@ -132,9 +132,9 @@ function ContributionGrid({ data }: { data: { total: { lastYear: number }; contr
           </div>
 
           <div className="gh-grid-scroll">
-            <div className="flex gap-[3px]">
+            <div className="flex gap-0.75">
               {weeks.map((week, wi) => (
-                <div key={wi} className="flex flex-col gap-[3px]">
+                <div key={wi} className="flex flex-col gap-0.75">
                   {week.map((day) => (
                     <ContributionCell key={day.date} day={day} />
                   ))}
@@ -170,7 +170,7 @@ export default function GitHubGraph() {
   if (isError) return null;
 
   return (
-    <section className="py-12 border-t border-white/50">
+    <section className="py-5">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold">GitHub Activity</h2>
         <a

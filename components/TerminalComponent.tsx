@@ -59,7 +59,7 @@ export default function TerminalComponent({ children }: { children: ReactNode })
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent
-        className="bg-[#0d1117] rounded-xl h-[60vh] !p-0 !max-w-2xl border-accent-blue/20"
+        className="bg-[#0d1117] rounded-xl h-[60vh] p-0! max-w-2xl! border-accent-blue/20"
         showCloseButton={false}
         onOpenAutoFocus={(e) => {
           e.preventDefault();

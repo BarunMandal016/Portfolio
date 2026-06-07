@@ -35,12 +35,39 @@
 
   /* Animations — registered here so Tailwind generates animate-* classes */
   --animate-fade-up: fade-slide-up 0.6s ease-out both;
-  --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
 }
 
 :root {
   --radius: 0.625rem;
+  --background: oklch(0.965 0.004 260);
+  --foreground: oklch(0.13 0.012 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.012 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.012 260);
+  --primary: oklch(0.5 0.18 260);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.008 260);
+  --secondary-foreground: oklch(0.2 0.012 260);
+  --muted: oklch(0.93 0.006 260);
+  --muted-foreground: oklch(0.38 0.015 260);
+  --accent: oklch(0.92 0.01 260);
+  --accent-foreground: oklch(0.13 0.012 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0 0 0 / 16%);
+  --input: oklch(0 0 0 / 18%);
+  --ring: oklch(0.5 0.18 260);
+
+  /* GitHub graph levels */
+  --gh-level-0: rgba(0, 0, 0, 0.06);
+  --gh-level-1: rgba(102, 126, 234, 0.25);
+  --gh-level-2: rgba(102, 126, 234, 0.5);
+  --gh-level-3: rgba(102, 126, 234, 0.75);
+  --gh-level-4: #667eea;
+}
+
+.dark {
   --background: oklch(0.09 0.005 260);
   --foreground: oklch(0.93 0.005 260);
   --card: oklch(0.14 0.008 260);
@@ -60,12 +87,7 @@
   --input: oklch(1 0 0 / 10%);
   --ring: oklch(0.7 0.15 260);
 
-  /* GitHub graph levels */
   --gh-level-0: rgba(255, 255, 255, 0.04);
-  --gh-level-1: rgba(102, 126, 234, 0.25);
-  --gh-level-2: rgba(102, 126, 234, 0.5);
-  --gh-level-3: rgba(102, 126, 234, 0.75);
-  --gh-level-4: #667eea;
 }
 
 /* ── Keyframes ── */
@@ -77,20 +99,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes skill-pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  60% {
-    transform: scale(1.08);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -109,28 +117,6 @@
   }
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 @keyframes pulse-dot {
   0%,
   100% {
@@ -138,12 +124,6 @@
   }
   50% {
     opacity: 0.5;
-  }
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
   }
 }
 
@@ -163,42 +143,23 @@ body > * {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(102, 126, 234, 0.3);
+  background: var(--muted-foreground);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(102, 126, 234, 0.5);
 }
 
-/* ── Reusable classes ── */
-.gradient-text {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-text-animated {
-  background: linear-gradient(270deg, #667eea, #764ba2, #f093fb, #667eea);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 4s ease infinite;
-}
-
-.typing-cursor::after {
-  content: "|";
-  animation: blink 1s step-end infinite;
-  color: #667eea;
-}
-
+/* ── Reusable classes ──
+   Policy: keep only what Tailwind utilities can't express cleanly —
+   keyframes, pseudo-elements, 3D flip mechanics — or what's reused
+   across multiple pages. Everything else lives inline in components. */
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -214,31 +175,11 @@ body > * {
   border-radius: 2px;
 }
 
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-.card-hover {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
-  border-color: rgba(102, 126, 234, 0.3);
-}
-
 /* ── Skills ── */
 .skill-bar-track {
   height: 32px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--accent);
   overflow: hidden;
   position: relative;
 }
@@ -278,21 +219,17 @@ body > * {
 }
 
 .skill-pill {
-  animation: skill-pop 0.4s ease-out both;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  border: 1px solid rgba(102, 126, 234, 0.2);
-  background: rgba(102, 126, 234, 0.06);
-  color: rgba(255, 255, 255, 0.85);
-  transition:
-    border-color 0.25s,
-    background 0.25s,
-    transform 0.25s;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--accent);
+  transition: all 0.3s;
+  cursor: default;
 }
+
 .skill-pill:hover {
   border-color: rgba(102, 126, 234, 0.5);
   background: rgba(102, 126, 234, 0.12);
@@ -308,81 +245,35 @@ body > * {
   background: rgba(118, 75, 162, 0.12);
 }
 
-/* ── Experience ── */
-.exp-panel {
+/* ── Flip card (3D mechanics — not expressible as inline utilities) ── */
+.flip-card {
+  perspective: 1200px;
+}
+.flip-card-inner {
   position: relative;
-  padding-left: 1.5rem;
-  border-left: 2px solid rgba(102, 126, 234, 0.15);
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.exp-panel::before {
-  content: "";
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--card);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+.flip-card:hover .flip-face {
+  border-color: rgba(102, 126, 234, 0.3);
+}
+.flip-face-back {
   position: absolute;
-  left: -6px;
-  top: 4px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #667eea;
-  box-shadow: 0 0 12px rgba(102, 126, 234, 0.4);
-}
-
-.exp-panel-edu {
-  border-left-color: rgba(118, 75, 162, 0.2);
-}
-.exp-panel-edu::before {
-  background: #764ba2;
-  box-shadow: 0 0 12px rgba(118, 75, 162, 0.4);
-}
-
-.exp-date-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-family: ui-monospace, monospace;
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
-  border: 1px solid rgba(102, 126, 234, 0.15);
-}
-
-.exp-date-chip-edu {
-  background: rgba(118, 75, 162, 0.1);
-  color: #764ba2;
-  border-color: rgba(118, 75, 162, 0.15);
-}
-
-.exp-highlight {
-  position: relative;
-  padding-left: 1rem;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-}
-.exp-highlight::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(102, 126, 234, 0.5);
-}
-
-.exp-tech-tag {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background: rgba(102, 126, 234, 0.08);
-  color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(102, 126, 234, 0.1);
+  inset: 0;
+  transform: rotateY(180deg);
 }
 
 /* ── GitHub graph ── */
@@ -472,24 +363,3 @@ body > * {
   display: flex;
   align-items: center;
 }
-
-/* @keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  25% {
-    transform: translateX(50%);
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  75% {
-    transform: translateX(50%);
-  }
-}
-
-.animate-scroll {
-  display: flex;
-  width: 100%;
-  animation: scroll 5s linear infinite;
-} */

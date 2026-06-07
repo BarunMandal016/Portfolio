@@ -8,9 +8,9 @@ export const TERMINAL_RESPONSES: TerminalResponses = {
     "Shipped AI search, zero-downtime CI/CD, AWS infra",
   ].join("\n"),
   skills: [
-    "JS/TS · Python · React · Next.js · NestJS · FastAPI",
-    "AWS · Docker · PostgreSQL · MongoDB · Redis · Prisma",
-    "GitHub Actions · Terraform · Cypress · Jest",
+    "JS/TS · Python · React · Next.js · NestJS · Express · FastAPI",
+    "PostgreSQL · MongoDB · Redis · Prisma · Sequelize · Drizzle",
+    "AWS · Docker · GitHub Actions · Terraform · WebSocket · SSE",
   ].join("\n"),
   experience: [
     "Assoc. Full-Stack Dev | PMsquare | Sep 2024–now",
@@ -20,7 +20,10 @@ export const TERMINAL_RESPONSES: TerminalResponses = {
   ].join("\n"),
   projects: [
     "HireMatch — AI candidate screening (GenAI, NLP, vector DB)",
-    "Slack Bot — sales intelligence with RBAC",
+    "Slack Sales Bot — sales intelligence with RBAC",
+    "Hamro Mart — e-commerce platform (storefront + admin)",
+    "Roost — skill swap × room finder (coming soon)",
+    "Qorom — agentic B2B marketing (coming soon)",
   ].join("\n"),
   contact: [
     "barun.mandalbct@gmail.com · +977 9824865280",

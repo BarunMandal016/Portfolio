@@ -1,62 +1,53 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
-import { SITE_NAME, EMAIL, LOCATION, FOOTER_SOCIAL_LINKS } from "@/data";
+import { EMAIL, SOCIAL_LINKS } from "@/data";
 import type { ReactNode } from "react";
+import Github from "./icons/Github";
+import Linkedin from "./icons/Linkedin";
 
 const SOCIAL_ICONS: Record<string, ReactNode> = {
   GitHub: <Github className="size-5" />,
   LinkedIn: <Linkedin className="size-5" />,
-  Email: <Mail className="size-5" />,
 };
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="border-t border-white/50 bg-gray-200">
-      <div className="max-w-5xl mx-auto w-full py-8 px-6">
-        <div className="flex flex-col sm:flex-row justify-between gap-6">
-          <div className="space-y-2">
-            <h3 className="font-bold text-lg bg-gradient-to-r from-green-400 to-green-800 bg-clip-text text-transparent">
-              Barun Mandal
-            </h3>
-            <p className="text-sm text-black flex items-center gap-1.5">
-              <MapPin className="size-3.5" />
-              {LOCATION}
-            </p>
+    <footer className="mb-12">
+      <div className="max-w-5xl mx-auto w-full border-t border-foreground/25 pt-5 flex flex-col gap-4">
+        <h3 className="font-bold text-lg bg-linear-to-r from-green-400 to-green-800 bg-clip-text text-transparent">
+          Barun Mandal
+        </h3>
+
+        <div className="p-4 rounded-lg bg-accent/50 border border-border space-y-3 w-max max-w-full">
+          <p className="text-sm font-medium">Prefer email?</p>
+          <p className="text-xs text-muted-foreground">
+            You can also reach me directly at{" "}
             <a
               href={`mailto:${EMAIL}`}
-              className="text-sm  text-black flex items-center gap-1.5"
+              className="text-accent-blue hover:underline"
             >
-              <Mail className="size-3.5" />
               {EMAIL}
             </a>
+          </p>
+          <div className="flex gap-2">
+            {SOCIAL_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                aria-label={link.label}
+                className="p-2 rounded-sm border hover:scale-110 ease-in transition-transform"
+              >
+                {SOCIAL_ICONS[link.label]}
+              </Link>
+            ))}
           </div>
-
-          <div className="flex flex-col gap-2 max-h-max">
-            <span className="text-[18px] font-medium text-black">Connect</span>
-            <div className="grid grid-cols-2 gap-2">
-              {FOOTER_SOCIAL_LINKS.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  aria-label={link.label}
-                  className="p-1 rounded-sm text-muted-foreground hover:text-foreground hover:bg-accent hover:scale-125 transition-colors ease-in-out"
-                >
-                  {SOCIAL_ICONS[link.label]}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 pt-4 flex justify-center">
-          <p className="text-xs text-black">
-            &copy; {new Date().getFullYear()} {SITE_NAME}
+          <p className="text-xs text-muted-foreground">
+            Kathmandu, Nepal · UTC+5:45 hrs
           </p>
         </div>
+
+        <p className="text-xs">&copy; {new Date().getFullYear()}.</p>
       </div>
     </footer>
   );
 }
-
-export default Footer;
