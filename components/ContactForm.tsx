@@ -2,78 +2,8 @@
 
 import { useContactForm } from "@/hooks/useContactForm";
 import { Card, CardContent } from "@/components/ui/card";
+import { FormInput, FormTextarea } from "@/components/FormFields";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { useId } from "react";
-
-function FormInput({
-  label,
-  type = "text",
-  value,
-  onChange,
-  placeholder,
-  required,
-}: {
-  label: string;
-  type?: string;
-  value: string;
-  onChange: (value: string) => void;
-  placeholder: string;
-  required?: boolean;
-}) {
-  const id = useId();
-
-  return (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className="text-sm font-medium">
-        {label}
-        {required && <span className="text-accent-blue ml-0.5">*</span>}
-      </label>
-      <input
-        id={id}
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        required={required}
-        className="w-full px-4 py-2.5 rounded-lg bg-accent/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent-blue/50 focus:ring-1 focus:ring-accent-blue/25 transition-colors"
-      />
-    </div>
-  );
-}
-
-function FormTextarea({
-  label,
-  value,
-  onChange,
-  placeholder,
-  required,
-}: {
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-  placeholder: string;
-  required?: boolean;
-}) {
-  const id = useId();
-
-  return (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className="text-sm font-medium">
-        {label}
-        {required && <span className="text-accent-blue ml-0.5">*</span>}
-      </label>
-      <textarea
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        required={required}
-        rows={5}
-        className="w-full px-4 py-2.5 rounded-lg bg-accent/50 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent-blue/50 focus:ring-1 focus:ring-accent-blue/25 transition-colors resize-none"
-      />
-    </div>
-  );
-}
 
 export default function ContactForm() {
   const {

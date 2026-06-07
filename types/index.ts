@@ -4,17 +4,6 @@ export interface NavItem {
   href: string;
 }
 
-// ── Experience ──
-export interface Experience {
-  title: string;
-  company: string;
-  location: string;
-  period: string;
-  type: "work" | "education";
-  highlights: string[];
-  tech: string[];
-}
-
 // ── Skills ──
 export interface SkillBar {
   name: string;
@@ -40,12 +29,6 @@ export interface Project {
 }
 
 // ── Contact ──
-export interface ContactInfo {
-  label: string;
-  value: string;
-  href: string | null;
-}
-
 export interface SocialLink {
   label: string;
   href: string;
@@ -59,6 +42,12 @@ export interface ContactFormData {
   message: string;
 }
 
+// ── Assign Task ──
+export interface TaskComplexity {
+  label: string;
+  duration: string;
+}
+
 // ── Home page ──
 export interface HomeExperience {
   role: string;
@@ -66,12 +55,17 @@ export interface HomeExperience {
   period: string;
 }
 
+export interface HomeProject {
+  title: string
+  description: string
+  tag: string
+  accent: "blue" | "purple" | "amber"
+  visual: { node: string; sub: string }
+  metrics: string[]
+  tech: string[]
+  details: string[]
+  github?: string
+}
+
 // ── Terminal ──
 export type TerminalResponses = Record<string, string>;
-
-// ── About ──
-export interface ImpactMetric {
-  metric: string;
-  label: string;
-  detail: string;
-}

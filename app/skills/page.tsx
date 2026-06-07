@@ -108,12 +108,12 @@ function SkillCategoryBlock({
 export default function SkillsPage() {
   return (
     <section className="px-4 sm:px-6 lg:px-8 max-w-5xl w-full py-10 sm:py-14">
-      <h2
+      <h1
         className="section-title animate-fade-up"
         style={{ animationDelay: "0s" }}
       >
         Skills & Expertise
-      </h2>
+      </h1>
 
       <p
         className="text-muted-foreground mt-4 mb-10 max-w-2xl animate-fade-up"

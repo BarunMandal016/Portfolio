@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { toast } from "sonner";
 import { WEB3FORMS_ACCESS_KEY } from "@/lib/constants";
 import type { ContactFormData } from "@/types";
 
@@ -70,6 +71,7 @@ export function useContactForm() {
       if (result.success) {
         setState({ status: "success", error: null });
         setFormData(INITIAL_FORM_DATA);
+        toast.success("Message sent! I'll get back to you soon.");
       } else {
         setState({
           status: "error",

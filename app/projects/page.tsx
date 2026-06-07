@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Bot, BrainCircuit } from "lucide-react";
 import Link from "next/link";
 import { PROJECTS } from "@/data";
+import { fadeUp } from "@/lib/motion";
 import type { Project } from "@/types";
 import type { ReactNode } from "react";
 
@@ -14,21 +15,16 @@ const PROJECT_ICONS: Record<string, ReactNode> = {
 };
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={fadeIn}
+      variants={fadeUp}
       transition={{ duration: 0.5, delay: index * 0.15 }}
       className="max-h-52 cursor-pointer"
     >
-      <Card className="card-hover bg-card border-border py-0 h-full">
+      <Card className="bg-card border border-border py-0 h-full transition-all duration-300 hover:-translate-y-1 hover:border-accent-blue/30 hover:shadow-[0_12px_40px_rgba(102,126,234,0.15)]">
         <CardContent className="p-5 flex flex-col justify-between h-full">
           <div className="flex flex-col gap-1">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -70,20 +66,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </p>
           </div>
 
-          {/* {project.highlights.length > 0 && (
-            <ul className="space-y-1.5">
-              {project.highlights.map((h, i) => (
-                <li
-                  key={i}
-                  className="text-sm text-muted-foreground flex gap-2"
-                >
-                  <span className="text-accent-blue mt-1 shrink-0">&#8226;</span>
-                  <span>{h}</span>
-                </li>
-              ))}
-            </ul>
-          )} */}
-
           <div className="flex gap-2 pt-1">
             {project.tech.map((t) => (
               <Badge key={t} variant="secondary" className="text-xs">
@@ -98,23 +80,18 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export default function ProjectsPage() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <section className="px-6 flex flex-col space-y-6 max-w-5xl w-full py-10">
-      <motion.h2
+      <motion.h1
         className="section-title"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={fadeIn}
+        variants={fadeUp}
         transition={{ duration: 0.5 }}
       >
         Projects
-      </motion.h2>
+      </motion.h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {PROJECTS.map((project, index) => (
