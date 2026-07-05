@@ -1,5 +1,5 @@
-import type { Project, HomeProject } from "@/types";
-import { GITHUB_URL } from "./personal";
+import type { Project, HomeProject } from "@/types"
+import { GITHUB_URL } from "./personal"
 
 export const PROJECTS: Project[] = [
   {
@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
       "Added multi-user note-taking across all stages of the hiring pipeline for team collaboration",
       "Built an event-driven pipeline that processes new candidate resumes by listening to change events from a SharePoint site",
     ],
-    tech: ["Next.js","TanStack Query", "Vector DB", "GenAI"],
+    tech: ["Next.js", "TanStack Query", "Vector DB", "GenAI"],
     github: GITHUB_URL,
   },
   {
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     tech: ["Next.js", "Framer Motion"],
     github: GITHUB_URL,
   },
-];
+]
 
 export const HOME_PROJECTS: HomeProject[] = [
   {
@@ -105,6 +105,91 @@ export const HOME_PROJECTS: HomeProject[] = [
     github: GITHUB_URL,
   },
   {
+    title: "Kanak",
+    description:
+      "Simple software for jewellery shops. Bill at the live gold rate, track every gram, run gold loans, and collect credit on WhatsApp — one app built for Nepali jewellers.",
+    tag: "Personal Project",
+    accent: "amber",
+    visual: { node: "Jewellery", sub: "gold rate" },
+    metrics: ["💍 Gold tracking", "📱 WhatsApp billing", "💰 Loans & credit"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "WhatsApp API"],
+    details: [
+      "Real-time gold rate billing for accurate pricing",
+      "Gram-level inventory tracking for jewellery items",
+      "Gold loan management and credit collection system",
+      "WhatsApp integration for customer communication",
+    ],
+    github: GITHUB_URL,
+  },
+  {
+    title: "Callback",
+    description:
+      "Job search automation for international students. Scans every source, screens out ghost jobs and scams, tailors your resume, finds recruiter emails, and applies — while you're in class.",
+    tag: "Personal Project",
+    accent: "blue",
+    visual: { node: "Job Search", sub: "auto apply" },
+    metrics: ["🤖 Auto scanning", "📧 Recruiter finder", "📝 Resume tailor"],
+    tech: ["Next.js", "Python", "Node.js", "Job APIs", "GenAI"],
+    details: [
+      "Scans multiple job boards and sources for relevant opportunities",
+      "AI-powered screening to filter out ghost jobs and scams",
+      "Resume tailoring based on job description and recruiter expectations",
+      "Automated email discovery and application submission",
+    ],
+    github: GITHUB_URL,
+  },
+  {
+    title: "Acre",
+    description:
+      "Platform for real estate agents to track leads and discover new opportunities — your assistant for managing and growing your client pipeline.",
+    tag: "Personal Project",
+    accent: "blue",
+    visual: { node: "Real Estate", sub: "lead tracking" },
+    metrics: ["📍 Lead tracking", "🎯 Lead discovery", "📊 Pipeline mgmt"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Maps API"],
+    details: [
+      "Comprehensive lead tracking and management system for agents",
+      "Lead discovery and sourcing tools to find new opportunities",
+      "Pipeline analytics and performance insights",
+      "Property listing and client communication hub",
+    ],
+    github: GITHUB_URL,
+  },
+  {
+    title: "Nexus",
+    description:
+      "Platform for posting articles, blogs, notes, and documentation — a Medium-inspired space where ideas are shared and discovered.",
+    tag: "Personal Project",
+    accent: "purple",
+    visual: { node: "Content", sub: "sharing" },
+    metrics: ["📝 Article posting", "📚 Blog platform", "🔍 Discoverability"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Markdown"],
+    details: [
+      "Rich text editor for writing articles, blogs, notes, and documentation",
+      "Category and tag-based organization for easy content discovery",
+      "Author profiles and following system for community building",
+      "Markdown support with preview and formatting options",
+    ],
+    github: GITHUB_URL,
+  },
+  {
+    title: "Revline",
+    description:
+      "Run your lot at the redline. An operating system for independent US used-car dealers — the segment the incumbents like CDK, Reynolds, and Dealertrack price out and ignore.",
+    tag: "Personal Project",
+    accent: "purple",
+    visual: { node: "Used Cars", sub: "dealer OS" },
+    metrics: ["🚗 Dealer OS", "📊 Inventory + CRM", "💸 Lean pricing"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
+    details: [
+      "Built for independent used-car dealers who need a modern operating system",
+      "Covers inventory management, lead tracking, and customer workflow in one place",
+      "Designed to be more affordable and more focused than legacy dealer platforms",
+      "Supports day-to-day dealership operations without enterprise-level complexity",
+    ],
+    github: GITHUB_URL,
+  },
+  {
     title: "Qorom",
     description:
       "Agentic solution for B2B business owners — AI agents that market your business and products for you.",
@@ -120,4 +205,4 @@ export const HOME_PROJECTS: HomeProject[] = [
     ],
     github: GITHUB_URL,
   },
-];
+]
