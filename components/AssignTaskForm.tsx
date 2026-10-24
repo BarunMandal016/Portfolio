@@ -4,7 +4,8 @@ import { useState } from "react"
 import { toast } from "sonner"
 import { Card, CardContent } from "@/components/ui/card"
 import { FormInput, FormTextarea, FormSelect } from "@/components/FormFields"
-import { WEB3FORMS_ACCESS_KEY } from "@/lib/constants"
+// import { WEB3FORMS_ACCESS_KEY } from "@/lib/constants"
+import configurations from "@/lib/config"
 import {
   TASK_CATEGORIES,
   TASK_COMPLEXITIES,
@@ -86,7 +87,7 @@ export default function AssignTaskForm() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
+          access_key: configurations.WEB3FORMS_ACCESS_KEY,
           from_name: data.name,
           email: data.email,
           subject: `Task assignment from ${data.name}`,

@@ -20,7 +20,7 @@ export default function Navbar() {
   }, [pathname])
 
   return (
-    <header className="sticky z-10 top-0 backdrop-blur-xl border-b border-border">
+    <header className="sticky z-10 top-0 backdrop-blur-xl border-b">
 
       <nav className="max-w-5xl mx-auto flex items-center justify-between py-4 sm:px-0 px-0">
         <Link href="/" className="group flex items-center gap-2">

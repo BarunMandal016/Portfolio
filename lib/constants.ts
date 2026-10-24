@@ -7,4 +7,5 @@
  * 3. You'll receive an access key via email
  * 4. Replace the placeholder below with your key
  */
-export const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+// export const WEB3FORMS_ACCESS_KEY = "ba72e9f3-2331-4f8a-8bb5-4fd83d793e50";
+export const WEB3FORMS_URL = "https://api.web3forms.com/submit"
