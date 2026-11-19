@@ -105,23 +105,6 @@ export const HOME_PROJECTS: HomeProject[] = [
     github: GITHUB_URL,
   },
   {
-    title: "Kanak",
-    description:
-      "Simple software for jewellery shops. Bill at the live gold rate, track every gram, run gold loans, and collect credit on WhatsApp — one app built for Nepali jewellers.",
-    tag: "Personal Project",
-    accent: "amber",
-    visual: { node: "Jewellery", sub: "gold rate" },
-    metrics: ["💍 Gold tracking", "📱 WhatsApp billing", "💰 Loans & credit"],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "WhatsApp API"],
-    details: [
-      "Real-time gold rate billing for accurate pricing",
-      "Gram-level inventory tracking for jewellery items",
-      "Gold loan management and credit collection system",
-      "WhatsApp integration for customer communication",
-    ],
-    github: GITHUB_URL,
-  },
-  {
     title: "Callback",
     description:
       "Job search automation for international students. Scans every source, screens out ghost jobs and scams, tailors your resume, finds recruiter emails, and applies — while you're in class.",
@@ -169,23 +152,6 @@ export const HOME_PROJECTS: HomeProject[] = [
       "Category and tag-based organization for easy content discovery",
       "Author profiles and following system for community building",
       "Markdown support with preview and formatting options",
-    ],
-    github: GITHUB_URL,
-  },
-  {
-    title: "Revline",
-    description:
-      "Run your lot at the redline. An operating system for independent US used-car dealers — the segment the incumbents like CDK, Reynolds, and Dealertrack price out and ignore.",
-    tag: "Personal Project",
-    accent: "purple",
-    visual: { node: "Used Cars", sub: "dealer OS" },
-    metrics: ["🚗 Dealer OS", "📊 Inventory + CRM", "💸 Lean pricing"],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-    details: [
-      "Built for independent used-car dealers who need a modern operating system",
-      "Covers inventory management, lead tracking, and customer workflow in one place",
-      "Designed to be more affordable and more focused than legacy dealer platforms",
-      "Supports day-to-day dealership operations without enterprise-level complexity",
     ],
     github: GITHUB_URL,
   },
