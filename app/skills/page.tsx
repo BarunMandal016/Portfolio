@@ -23,7 +23,7 @@ function SkillBarRow({
         }}
       />
       <span className="skill-bar-label">{bar.name}</span>
-      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-muted-foreground z-[2]">
+      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-muted-foreground z-2">
         {bar.level}%
       </span>
     </div>
@@ -67,7 +67,7 @@ function SkillCategoryBlock({
     >
       <div className="flex items-center gap-3 mb-4">
         <div
-          className="w-8 h-[2px] rounded-full"
+          className="w-8 h-0.5 rounded-full"
           style={{ background: isPurple ? "#764ba2" : "#667eea" }}
         />
         <h3 className="text-lg font-semibold tracking-tight">

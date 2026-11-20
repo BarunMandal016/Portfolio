@@ -4,7 +4,7 @@ export const HOME_EXPERIENCES: HomeExperience[] = [
   {
     role: "Associate Full-Stack Developer",
     company: "PMsquare",
-    period: "Sep 2024 — Present",
+    period: "Sep 2024 — Jun 2026",
   },
   {
     role: "Backend Developer Intern",
@@ -15,8 +15,13 @@ export const HOME_EXPERIENCES: HomeExperience[] = [
 
 export const HOME_EDUCATION: HomeExperience[] = [
   {
+    role: "MSc Management with Data Analytics",
+    company: "BPP University, London, United Kingdom",
+    period: "Sep 2026 — Present",
+  },
+  {
     role: "Bachelor in Computer Engineering",
-    company: "IOE-ERC, Dharan",
+    company: "IOE-ERC, Dharan, Nepal",
     period: "Oct 2019 — Apr 2024",
   },
 ];

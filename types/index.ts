@@ -17,17 +17,6 @@ export interface SkillCategory {
   pills: string[];
 }
 
-// ── Projects ──
-export interface Project {
-  title: string;
-  subtitle: string;
-  description: string;
-  highlights: string[];
-  tech: string[];
-  github?: string;
-  liveUrl?: string;
-}
-
 // ── Contact ──
 export interface SocialLink {
   label: string;
@@ -64,7 +53,6 @@ export interface HomeProject {
   metrics: string[]
   tech: string[]
   details: string[]
-  github?: string
 }
 
 // ── Terminal ──

@@ -14,11 +14,7 @@ export function JsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     email: EMAIL,
-    jobTitle: "Associate Full-Stack Developer",
-    worksFor: {
-      "@type": "Organization",
-      name: "PMsquare",
-    },
+    jobTitle: "Software Developer",
     description: SITE_DESCRIPTION,
     sameAs: [GITHUB_URL, LINKEDIN_URL],
     knowsAbout: [
@@ -37,6 +33,12 @@ export function JsonLd() {
       "Docker",
       "Terraform",
       "GitHub Actions",
+      "LangChain",
+      "Retrieval-Augmented Generation",
+      "Model Context Protocol",
+      "GraphQL",
+      "RabbitMQ",
+      "Vector Search",
     ],
     alumniOf: {
       "@type": "EducationalOrganization",

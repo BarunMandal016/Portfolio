@@ -42,7 +42,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            Kathmandu, Nepal · UTC+5:45 hrs
+            London, United Kingdom
           </p>
         </div>
 

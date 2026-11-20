@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { Menu, Terminal, X } from "lucide-react"
 import TerminalComponent from "./TerminalComponent"
 import ThemeToggle from "./ThemeToggle"
-import { NAV_ITEMS } from "@/data"
+import { NAV_ITEMS, SITE_NAME } from "@/data"
 import { Button } from "./ui/button"
 import { cn } from "@/lib/utils"
 
@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav className="max-w-5xl mx-auto flex items-center justify-between py-4 sm:px-0 px-0">
         <Link href="/" className="group flex items-center gap-2">
           <span className="font-semibold font-serif text-xl sm:text-3xl">
-            Portfolio
+            {SITE_NAME}
           </span>
         </Link>
         <div className="flex-1 flex justify-end items-center gap-2">
@@ -48,12 +48,6 @@ export default function Navbar() {
               </Link>
             )
           })}
-          {/* <Link
-            href="/contact"
-            className="text-xs font-medium px-4 py-2 rounded-sm text-foreground hover:opacity-90 transition-opacity"
-          >
-            Hire Me
-          </Link> */}
         </div>
 
         <div className="flex items-center gap-2">
@@ -100,6 +94,7 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 key={item.name}
+                onClick={() => setMobileOpen(false)}
                 className={`text-sm font-medium px-4 py-2.5 rounded-lg transition-colors ${
                   isActive
                     ? "text-foreground bg-accent/50"

@@ -4,7 +4,7 @@ import { SITE_URL } from "@/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Barun Mandal — available for full-stack development opportunities and collaborations.",
+    "Get in touch with Barun Mandal, a London-based software developer available for part-time and contract work.",
   alternates: {
     canonical: `${SITE_URL}/contact`,
   },

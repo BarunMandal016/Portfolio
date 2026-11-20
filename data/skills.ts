@@ -8,7 +8,7 @@ export const SKILL_DATA: SkillCategory[] = [
       { name: "JavaScript / TypeScript", level: 92 },
       { name: "Python", level: 80 },
     ],
-    pills: [],
+    pills: ["Dart", "Go", "Java"],
   },
   {
     title: "Frameworks & Libraries",
@@ -18,7 +18,14 @@ export const SKILL_DATA: SkillCategory[] = [
       { name: "NestJS / Express", level: 82 },
       { name: "FastAPI", level: 75 },
     ],
-    pills: ["Tailwind", "TanStack Query"],
+    pills: [
+      "Tailwind",
+      "TanStack Query",
+      "React Native",
+      "Flutter",
+      "Spring Boot",
+      "Zustand",
+    ],
   },
   {
     title: "Databases",
@@ -52,6 +59,18 @@ export const SKILL_DATA: SkillCategory[] = [
     bars: [],
     pills: ["Git", "WebSocket", "SSE", "Webhooks"],
   },
+  {
+    title: "AI & Application Tools",
+    accent: "blue",
+    bars: [],
+    pills: ["LangChain", "RAG", "MCP", "Vector/Semantic Search"],
+  },
+  {
+    title: "Messaging & Integrations",
+    accent: "purple",
+    bars: [],
+    pills: ["GraphQL", "RabbitMQ", "Pub/Sub", "Cypress", "Stripe"],
+  },
 ];
 
 export const CORE_SKILLS = [
@@ -72,4 +91,10 @@ export const CORE_SKILLS = [
   "Docker",
   "GitHub Actions",
   "Terraform",
+  "React Native",
+  "LangChain",
+  "RAG",
+  "GraphQL",
+  "RabbitMQ",
+  "Cypress",
 ];

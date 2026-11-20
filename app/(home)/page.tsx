@@ -156,16 +156,6 @@ function ShippedCard({
                 >
                   View details <ArrowRight className="size-3.5" />
                 </button>
-                {project.github && (
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    aria-label={`${project.title} on GitHub`}
-                    className="px-4 py-2 rounded-lg border text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                  >
-                    GitHub
-                  </Link>
-                )}
               </div>
             </div>
           </div>
@@ -289,7 +279,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-[15px] text-muted-foreground max-w-md leading-relaxed"
             >
-              2+ years of working experience in building projects and
+              3+ years of hands-on experience in building projects and
               practicing industry standards.
             </motion.p>
           </div>
@@ -331,7 +321,7 @@ export default function Home() {
       <GitHubGraph />
 
       <section className="py-12 border-t border-foreground/25">
-        <SectionHeader title="Inclined On" href="/skills" linkText="All skills" />
+        <SectionHeader title="My Toolkit" href="/skills" linkText="All skills" />
         <div className="flex flex-wrap gap-2">
           {CORE_SKILLS.map((skill) => (
             <span key={skill} className="skill-pill">
@@ -340,12 +330,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="py-12">
-        <SectionHeader
-          title="Things I've Shipped"
-          href="/projects"
-          linkText="View all"
-        />
+      <section id="projects" className="py-12">
+        <SectionHeader         title="Things I've Been Building" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {HOME_PROJECTS.map((project, index) => (
             <ShippedCard key={project.title} project={project} index={index} />
