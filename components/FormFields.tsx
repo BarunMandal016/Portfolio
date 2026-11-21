@@ -24,7 +24,6 @@ function FieldLabel({
 
 export function FormInput({
   label,
-  name,
   type = "text",
   value,
   onChange,
@@ -32,7 +31,6 @@ export function FormInput({
   required,
 }: {
   label: string
-  name?: string
   type?: string
   value: string
   onChange: (value: string) => void
@@ -46,7 +44,6 @@ export function FormInput({
       <FieldLabel id={id} label={label} required={required} />
       <input
         id={id}
-        name={name}
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -60,7 +57,6 @@ export function FormInput({
 
 export function FormTextarea({
   label,
-  name,
   value,
   onChange,
   placeholder,
@@ -68,7 +64,6 @@ export function FormTextarea({
   rows = 5,
 }: {
   label: string
-  name?: string
   value: string
   onChange: (value: string) => void
   placeholder: string
@@ -82,7 +77,6 @@ export function FormTextarea({
       <FieldLabel id={id} label={label} required={required} />
       <textarea
         id={id}
-        name={name}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
@@ -96,13 +90,11 @@ export function FormTextarea({
 
 export function FormSelect({
   label,
-  name,
   value,
   onChange,
   options,
 }: {
   label: string
-  name?: string
   value: string
   onChange: (value: string) => void
   options: string[]
@@ -114,7 +106,6 @@ export function FormSelect({
       <FieldLabel id={id} label={label} />
       <select
         id={id}
-        name={name}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={`${FIELD_CLASSES} cursor-pointer`}
